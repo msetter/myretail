@@ -9,7 +9,7 @@ Your goal is to create a RESTful service that can retrieve product and price det
 
 Build an application that performs the following actions: 
 
-*	Responds to an HTTP GET request at /products/{id} and delivers product data as JSON (where {id} will be a number. 
+*	Responds to an HTTP GET request at /products/{id} and delivers product data as JSON (where {id} will be a number). 
 *	Example product IDs: 15117729, 16483589, 16696652, 16752456, 15643793. 
 
 *	Example response: {"id":13860428,"name":"The Big Lebowski (Blu-ray) (Widescreen)","current_price":{"value": 13.49,"currency_code":"USD"}}
@@ -45,7 +45,7 @@ OR:<br/>
 * from the Gradle view double click on the **bootRun** task or right click and select
 ![picture bootRun](bootRun.png)
 
-#####To run from command line: ##### 
+##### To run from command line: ##### 
 * switch to myretail directory<br/>
 * run **./gradlew bootRun**
 
@@ -61,7 +61,7 @@ OR:<br/>
 (A quick test is with a GET, a PUT, a retry of the GET.)
 * Open up http://localhost:9091/myretail/swagger-ui.html
 * Expand *****product-controller*****
-##### GET - step 1 #####
+#### GET - step 1 ####
 * Click the GET button
 * Click the *Try it out* button on the right
 * Enter 13860428 [um, it's prefilled] for the ID

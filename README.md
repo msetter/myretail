@@ -1,4 +1,4 @@
-###myRetail RESTful service POC case study
+### myRetail RESTful service POC case study ###
 
 myRetail is a rapidly growing company with HQ in Richmond, VA and over 200 stores across the east coast. myRetail wants to make its internal data available to any number of client devices, from myRetail.com to native mobile apps. 
 
@@ -10,7 +10,7 @@ Your goal is to create a RESTful service that can retrieve product and price det
 Build an application that performs the following actions: 
 
 *	Responds to an HTTP GET request at /products/{id} and delivers product data as JSON (where {id} will be a number. 
-*	Example product IDs: 15117729, 16483589, 16696652, 16752456, 15643793) 
+*	Example product IDs: 15117729, 16483589, 16696652, 16752456, 15643793. 
 
 *	Example response: {"id":13860428,"name":"The Big Lebowski (Blu-ray) (Widescreen)","current_price":{"value": 13.49,"currency_code":"USD"}}
 
@@ -22,12 +22,12 @@ Build an application that performs the following actions:
 
 *	BONUS: Accepts an HTTP PUT request at the same path (/products/{id}), containing a JSON request body similar to the GET response, and updates the product’s price in the data store. 
  
-##### Prerequisites: #####
+#### Prerequisites: ####
 * Java 8 (and 12)
 * Gradle (5.4.1)
 * MongoDB (localhost:27017)
 
-##### To run in IntelliJ: #####
+#### To run in IntelliJ: ####
 * right click on MyRetailApplication in Project View<br/>
   * select: <em>Run 'com.poc.myretail.MyR...'</em><br/>
 ![picture run_from_project_view](run_from_project_view.png)
@@ -57,7 +57,7 @@ OR:<br/>
 ![picture runjavajar](run_java_jar.png)
 
 
-#### Test in Browse
+### Test in Browser ###
 (A quick test is with a GET, a PUT, a retry of the GET.)
 * Open up http://localhost:9091/myretail/swagger-ui.html
 * Expand *****product-controller*****
@@ -83,10 +83,11 @@ OR:<br/>
    }
    ```
 
-#### PUT - step 2 ###
+#### PUT - step 2 ####
 
 * Click the PUT button 
 * Click the *Try it out* button on the right
+![picture put_step2](put_product.png)
 * Enter 13860428 [um, it's prefilled] for the ID
 * Enter something like<br/>
     >{
@@ -107,9 +108,9 @@ OR:<br/>
      }
      ```
 
-#### GET - step 3 
+#### GET - step 3 ####
  * Rerun **step 1**
- * Example response:
+ * Example response - should match the PUT response:
       ```json
       {
          "id": 13860428,

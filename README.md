@@ -1,3 +1,5 @@
+https://github.com/msetter/myretail
+
 ### myRetail RESTful service POC case study ###
 
 myRetail is a rapidly growing company with HQ in Richmond, VA and over 200 stores across the east coast. myRetail wants to make its internal data available to any number of client devices, from myRetail.com to native mobile apps. 
@@ -45,7 +47,7 @@ OR:<br/>
 * from the Gradle view double click on the **bootRun** task or right click and select
 ![picture bootRun](bootRun.png)
 
-##### To run from command line: ##### 
+#### To run from command line: #### 
 * switch to myretail directory<br/>
 * run **./gradlew bootRun**
 
@@ -90,10 +92,13 @@ OR:<br/>
 ![picture put_step2](put_product.png)
 * Enter 13860428 [um, it's prefilled] for the ID
 * Enter something like<br/>
-    >{
+    ```json
+    {
       "currency_code": "GBP",
       "value": "68.34"
     }
+    ```
+  
 * Click *Execute*
 * Example response:
 ![picture put_step2_response](put_step_2_response.png)

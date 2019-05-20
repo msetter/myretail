@@ -28,7 +28,7 @@ class ProductController(val productService: ProductService) {
 
 	private val logger = LoggerFactory.getLogger(javaClass)
 
-	@ApiOperation("Get product details for Product ID, TCIN or SKU")
+	@ApiOperation("Get product details for Product ID, TCIN or SKU.")
 	@ApiResponses(
 		value = [ApiResponse(
 			code = 200,
@@ -52,26 +52,25 @@ class ProductController(val productService: ProductService) {
 		return ResponseEntity(productDto, HttpStatus.OK)
 	}
 
-	@ApiOperation("Get product name for Product ID, TCIN or SKU. POC to display name/title returned from RedSky.")
-	@GetMapping("/product", produces = [MediaType.APPLICATION_JSON_VALUE])
-	@ResponseBody
-	fun getProductName(
-		@ApiParam(name = PARAM_ID, value = "Product ID, TCIN or SKU", required = true)
-		@RequestParam(PARAM_ID, name = PARAM_ID, required = true) @NotBlank id: Long
-	): ResponseEntity<ProductName> {
-
-		logger.info("getProductName for $PARAM_ID: $id")
-
-		val name = productService.getProductName(id)
-
-		val productName = ProductName(name)
-
-		return ResponseEntity(productName, HttpStatus.OK)
-	}
+//	@ApiOperation("Get product name for Product ID, TCIN or SKU. POC to display name/title returned from RedSky.")
+//	@GetMapping("/product", produces = [MediaType.APPLICATION_JSON_VALUE])
+//	@ResponseBody
+//	fun getProductName(
+//		@ApiParam(name = PARAM_ID, value = "Product ID, TCIN or SKU", required = true)
+//		@RequestParam(PARAM_ID, name = PARAM_ID, required = true) id: Long
+//	): ResponseEntity<ProductName> {
+//
+//		logger.info("getProductName for $PARAM_ID: $id")
+//
+//		val name = productService.getProductName(id)
+//
+//		val productName = ProductName(name)
+//
+//		return ResponseEntity(productName, HttpStatus.OK)
+//	}
 
 	@ApiOperation(
-		value = "Update product price",
-		nickname = "putProduct",
+		value = "Update product price.",
 		response = ProductDto::class,
 		produces = "application/json"
 	)
@@ -94,7 +93,7 @@ class ProductController(val productService: ProductService) {
 			defaultValue = "13860428"
 		)
 		@PathVariable id: Long,
-		@ApiParam(name = "product", value = "The JSON data being used to update the product", required = true)
+		@ApiParam(name = "product", value = "The JSON data being used to update the product.", required = true)
 		@Valid @RequestBody updatedPrice: ProductPriceDto
 	): ResponseEntity<ProductDto> {
 
